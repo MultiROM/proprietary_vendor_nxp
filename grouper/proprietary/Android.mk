@@ -27,3 +27,17 @@ LOCAL_MODULE_OWNER := nxp
 include $(BUILD_PREBUILT)
 
 endif
+
+ifeq ($(TARGET_DEVICE),tilapia)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libpn544_fw
+LOCAL_SRC_FILES := libpn544_fw.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/firmware
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := nxp
+include $(BUILD_PREBUILT)
+
+endif
